@@ -14,8 +14,11 @@ For each fight instruction, output the power of the pokémon which maximizes the
 
 ## Constraints
 **1** <= **l** <= **r** <= **n** <= **10^12**
+
 **1** <= **q, m** <= **5 x 10^3**
+
 **1** <= **i** << **n**
+
 **1** <= **A_i, p** <= **10^9**
 
 ## Sample test cases
