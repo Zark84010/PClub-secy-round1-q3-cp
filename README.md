@@ -1,59 +1,57 @@
-# I will take this potato chip ... and eat it!
+# Gotta Catch 'em all
 ## Problem Statement
-Light Yagami has an undirecetd tree where each vertex has a *luck* value which is either **0** or **1**. For any path joining 2 vertices, its *fortune* is the XOR of all the luck values of the vertices lying in the path. The path is called *lucky* if the path's fortune is **1**. Since Light is busy eating potato chips, can you help him find the length of the longest lucky path?
+You are Ash, a young pokémon trainer. You have recently encountered upon a new location which offers a huge amount of exotic pokémons, and you do not want to miss this golden opportunity to catch them. You decide to take the help of Professor Oak, a well known pokémon researcher. Each of your and Prof. Oak's pokémon has its own power, which is a positive integer. You have **n** pokémons in your current team, where the **i***th* pokémon has power **A_i**.
+
+Prof. Oak gives you **q** instructions. Each instruction is of 2 types, either an instruction to change, or to fight. If the instruction is to change, then Prof. Oak gives you 2 positive integers, **i** and **p**, and you replace your **i***th* pokémon by a new pokémon having power **p**.  If the instruction is to fight, Prof. Oak again gives you 2 positive integers **l** and **r**, and you have to fight with your team which consists of the **l***th* pokémon till the **r***th* pokémon (both inclusive). The raw power is given by the **GCD** of all the powers of pokémons in your team. In each fight, Prof. Oak then allows you to choose a legendary pokémon, and and you can choose a pokémon with any power between **1** and **m** (both inclusive). The total team power is then the **LCM** of the raw team power and the power of the legendary pokémon.
+
+Since Ash is not good at maths, he needs your help to find the maximum team power he can achieve after adding the legendary pokémon.
 
 ## Input
-The first line of input consists of a positive integer `n` (`2` <= `n` <= `2 x 10^6`), which is the total number of vertices of the tree. The next `n-1` lines each contain 2 positive integers `u` and `v` (`1` <= `u, v` <= `n`) which denotes an edge between vertices `u` and `v`. The next line contains `n` space separated integers `luck[i]` (`luck[i] ∈ {0, 1}`) which denotes the luck value of vertex `i`.
+The first line of input consists of 3 positive integers `n`, `m` and `q`, where **n** is the total number of pokémons Ash has, **m** is the maximum power of the legendary pokémon, and **q** is the number of instructions. The next line consists of **n** space separated positive integers **A_1, A_2, ... A_n**. Then each of the next **q** lines of inupt is either of the form `c i p` (change instruction) or `f l r` (fight instruction).
 
 ## Output
-In a single line output the length of the longest lucky path, or more formally the maximum length among all paths in the tree such that the XOR of all luck values of the vertices belonging to the path is **1**. If there are no such paths, output -1.
+For each fight instruction, output the maximum team power Ash can achieve for that instruction in a new line.
+
+## Constraints
+
+**1** <= **l** <= **r** <= **n** <= **10^7**
+
+**1** <= **q** <= **10^3**
+
+**1** <= **m** <= **10^4**
+
+**1** <= **i** << **n**
+
+**1** <= **A_i, p** <= **10^9**
 
 ## Sample test cases
 
-### Input:
+### Input
 
-14
+`5 10 3`
 
-1 2
+`1 2 4 8 16`
 
-1 3
+`f 3 4`
 
-1 4
+`c 3 8`
 
-2 5
+`f 3 4`
 
-3 8
+## Output
 
-4 12
+`36`
 
-4 13
+`72`
 
-4 14
+## Input
 
-5 6
+`1 59 1`
 
-5 7
+`40`
 
-8 9
+`f 1 1`
 
-9 10
+## Output
 
-9 11
-
-0 1 0 1 0 1 0 1 0 1 0 1 0 1
-
-### Output:
-
-7
-
-### Input:
-
-2
-
-1 2
-
-0 0
-
-### Output:
-
--1
+`2360`
