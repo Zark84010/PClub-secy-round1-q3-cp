@@ -13,19 +13,33 @@ In a single line output the length of the longest lucky path, or more formally t
 **Input: **
 
 14
+
 1 2
+
 1 3
+
 1 4
+
 2 5
+
 3 8
+
 4 12
+
 4 13
+
 4 14
+
 5 6
+
 5 7
+
 8 9
+
 9 10
+
 9 11
+
 0 1 0 1 0 1 0 1 0 1 0 1 0 1
 
 **Output: **
@@ -35,7 +49,9 @@ In a single line output the length of the longest lucky path, or more formally t
 **Input: **
 
 2
+
 1 2
+
 0 0
 
 **Output**
