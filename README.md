@@ -10,7 +10,7 @@ In a single line output the length of the longest lucky path, or more formally t
 
 ## Sample test cases
 
-**Input: **
+### Input:
 
 14
 
@@ -42,11 +42,11 @@ In a single line output the length of the longest lucky path, or more formally t
 
 0 1 0 1 0 1 0 1 0 1 0 1 0 1
 
-**Output: **
+### Output:
 
 7
 
-**Input: **
+### Input:
 
 2
 
@@ -54,6 +54,6 @@ In a single line output the length of the longest lucky path, or more formally t
 
 0 0
 
-**Output**
+### Output:
 
 -1
